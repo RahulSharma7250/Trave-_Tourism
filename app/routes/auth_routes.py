@@ -13,7 +13,7 @@ def register():
 
     # Check if user already exists
     if mongo.db.users.find_one({"email": data['email']}):
-        return jsonify({"error": "User  already exists"}), 400
+        return jsonify({"error": "User          already exists"}), 400
 
     # Hash the password and save user
     hashed_password = generate_password_hash(data['password'])
